@@ -41,6 +41,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/vue-star-rating.js', mode: 'client' },
+    { src: '~/plugins/chart.js', mode: 'client' },
+    { src: '~/plugins/mixins.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -58,6 +61,8 @@ export default {
     '@nuxtjs/axios',
     //https://dev.auth.nuxtjs.org/
     '@nuxtjs/auth-next',
+    //https://github.com/avil13/vue-sweetalert2
+    'vue-sweetalert2/nuxt',
   ],
 
   auth: {
@@ -73,9 +78,9 @@ export default {
         },
         user: {
           property: 'user',
-          // autofetch: true
+          // autoFetch: true
         },
-        endpoint: {
+        endpoints: {
           login: {
             url: '/api/admin/login',
             method: 'post',
@@ -105,7 +110,7 @@ export default {
           property: 'user',
           // autoFecth: true
         },
-        endpoint: {
+        endpoints: {
           login: {
             url: '/api/customer/login',
             method: 'post',
