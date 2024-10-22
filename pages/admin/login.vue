@@ -2,7 +2,7 @@
     <div class="fade-in">
       <div class="text-center mb-4">
         <nuxt-link to="/" class="text-black">
-          <img src="/images/logo.png" width="50">
+          <img src="/images/pydan1.png" width="50">
           <h3 class="mt-2 font-weight-bold">PYDAN STORE</h3>
         </nuxt-link>
       </div>

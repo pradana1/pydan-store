@@ -2,7 +2,7 @@
     <div class="c-app">
       <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
         <div class="c-sidebar-brand d-lg-down-none">
-          <img src="/images/xiaomi.png" class="bg-light rounded shadow-sm p-2" width="35"> <span class="ml-2 font-weight-bold">MI STORE</span>
+          <img src="/images/pydan2.png" class="bg-light rounded shadow-sm p-2" width="35"> <span class="ml-2 font-weight-bold">PYDAN STORE</span>
         </div>
   
         <!-- sidebar -->
