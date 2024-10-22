@@ -27,6 +27,12 @@
                     <template v-slot:cell(image)="data">
                         <img class="img-fluid" width="50" :src="data.item.image" />
                     </template>
+                    <template v-slot:cell(actions)="row">
+                        <b-button :to="{name: 'admin-categories-edit-id', params: {id: row.item.id}}" variant="info" size="sm">
+                            EDIT
+                        </b-button>
+                        <b-button variant="danger" size="sm" @click="destroyCategory(row.item.id)">DELETE</b-button>
+                    </template>
                   </b-table>
   
                   <!-- pagination -->
@@ -43,85 +49,120 @@
   </template>
   
   <script>
-    export default {
-  
-      //layout
-      layout: 'admin',
-  
-      //meta
-      head() {
-        return {
-          title: 'Categories - Administrator',
-        }
-      },
-  
-      //data function
-      data() {
-        return {
-          //table header
-          fields: [{
-              label: 'Image',
-              key: 'image',
-              tdClass: 'text-center'
-            },
-            {
-              label: 'Category Name',
-              key: 'name'
-            },
-            {
-              label: 'Actions',
-              key: 'actions',
-              tdClass: 'text-center'
-            }
-          ],
-  
-          //state search
-          search: ''
-        }
-      },
-  
-      //hook "asyncData"
-      async asyncData({ store }) {
-          await store.dispatch('admin/category/getCategoriesData')
-      },
-  
-      //computed
-      computed: {
-  
-          //categories
-          categories() {
-              return this.$store.state.admin.category.categories
-          },
-      },
-  
-      //method
-      methods: {
-      
-          //method "searchData"
-          searchData() {
-  
-              //commit to mutation "SET_PAGE"
-              this.$store.commit('admin/category/SET_PAGE', 1)
-  
-              //dispatch on action "getCategoriesData"
-              this.$store.dispatch('admin/category/getCategoriesData', this.search)
-          },
-  
-          //method "changePage"
-          changePage(page) {
-  
-              //commit to mutation "SET_PAGE"
-              this.$store.commit('admin/category/SET_PAGE', page)
-  
-              //dispatch on action "getCategoriesData"
-              this.$store.dispatch('admin/category/getCategoriesData', this.search)
-          },
-  
+  export default {
+
+    //layout
+    layout: 'admin',
+
+    //meta
+    head() {
+      return {
+        title: 'Categories - Administrator',
       }
-  
+    },
+
+    //data function
+    data() {
+      return {
+        //table header
+        fields: [{
+            label: 'Image',
+            key: 'image',
+            tdClass: 'text-center'
+          },
+          {
+            label: 'Category Name',
+            key: 'name'
+          },
+          {
+            label: 'Actions',
+            key: 'actions',
+            tdClass: 'text-center'
+          }
+        ],
+
+        //state search
+        search: ''
+      }
+    },
+
+    //hook "asyncData"
+    async asyncData({ store }) {
+        await store.dispatch('admin/category/getCategoriesData')
+    },
+
+    //computed
+    computed: {
+
+        //categories
+        categories() {
+            return this.$store.state.admin.category.categories
+        },
+    },
+
+    //method
+    methods: {
+    
+        //method "searchData"
+        searchData() {
+
+            //commit to mutation "SET_PAGE"
+            this.$store.commit('admin/category/SET_PAGE', 1)
+
+            //dispatch on action "getCategoriesData"
+            this.$store.dispatch('admin/category/getCategoriesData', this.search)
+        },
+
+        //method "changePage"
+        changePage(page) {
+
+            //commit to mutation "SET_PAGE"
+            this.$store.commit('admin/category/SET_PAGE', page)
+
+            //dispatch on action "getCategoriesData"
+            this.$store.dispatch('admin/category/getCategoriesData', this.search)
+        },
+
+        //method "destroyCategory"
+        destroyCategory(id) {
+          this.$swal.fire({
+            title: 'APAKAH ANDA YAKIN ?',
+            text: "INGIN MENGHAPUS DATA INI !",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'YA, HAPUS!',
+            cancelButtonText: 'TIDAK',
+          }).then((result) => {
+            if (result.isConfirmed) {
+
+              //dispatch to action "deleteCategory" vuex
+              this.$store.dispatch('admin/category/destroyCategory', id)
+                .then(() => {
+
+                  //feresh data
+                  this.$nuxt.refresh()
+
+                  //alert
+                  this.$swal.fire({
+                    title: 'BERHASIL!',
+                    text: "Data Berhasil Dihapus!",
+                    icon: 'success',
+                    showConfirmButton: false,
+                    timer: 2000
+                  })
+
+                })
+            }
+          })
+        }
+
     }
-  </script>
-  
-  <style>
-  
-  </style>
+
+  }
+</script>
+
+<style>
+
+</style>
