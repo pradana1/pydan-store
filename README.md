@@ -1,4 +1,4 @@
-# pydan-store
+# STORE PROJECT PYDANN - Finish 24/12/2024
 
 ## Build Setup
 
