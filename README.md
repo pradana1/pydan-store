@@ -1,4 +1,4 @@
-# pydan-store
+# STORE PROJECT PYDANN
 
 ## Build Setup
 
