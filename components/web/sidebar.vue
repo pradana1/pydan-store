@@ -1,49 +1,51 @@
 <template>
-    <div class="card border-0 rounded shadow-sm border-top-orange">
-      <div class="card-body">
-        <h5>MAIN MENU</h5>
-        <hr>
-        <ul class="list-group">
-          <nuxt-link :to="{name: 'customer-dashboard'}"
-            class="list-group-item text-decoration-none text-dark text-uppercase"><i
-              class="fa fa-tachometer-alt"></i> Dashboard
-          </nuxt-link>
-  
-          <a href="#" class="list-group-item text-decoration-none text-dark text-uppercase"><i
-              class="fa fa-shopping-cart"></i> My Orders
-          </a>
-  
-          <a @click="logout" class="list-group-item text-decoration-none text-dark text-uppercase"
-            style="cursor: pointer;"><i class="fa fa-sign-out-alt"></i> Logout
-          </a>
-        </ul>
-      </div>
+  <div class="card border-0 rounded shadow-sm border-top-orange">
+    <div class="card-body">
+      <h5>MAIN MENU</h5>
+      <hr>
+      <ul class="list-group">
+        <nuxt-link :to="{name: 'customer-dashboard'}"
+          class="list-group-item text-decoration-none text-dark text-uppercase"><i
+            class="fa fa-tachometer-alt"></i> Dashboard
+        </nuxt-link>
+
+        <nuxt-link :to="{name: 'customer-invoices'}" class="list-group-item text-decoration-none text-dark text-uppercase"><i class="fa fa-shopping-cart"></i> My Orders
+        </nuxt-link>
+
+        <a @click="logout" class="list-group-item text-decoration-none text-dark text-uppercase"
+          style="cursor: pointer;"><i class="fa fa-sign-out-alt"></i> Logout
+        </a>
+      </ul>
     </div>
-  </template>
+  </div>
+</template>
 
-  <script>
-    export default {
+<script>
+  export default {
 
-        // method 
-        methods: {
+    //method
+    methods: {
 
-            // method "logout"
-            async logout() {
+      //method "logout"
+      async logout() {
 
-                // logout auth 
-                await this.$auth.logout()
+        //logout auth
+        await this.$auth.logout()
 
-                // redirect route customer login
-                this.$router.push({
-                    name: 'customer-login'
-                })
-            }
-        }
+        //redirect route customer login
+        this.$router.push({
+          name: 'customer-login'
+        })
+
+      }
+
     }
+
+  }
 </script>
 
 <style scoped>
-a.nuxt-link-active {
+  a.nuxt-link-active {
     background: rgba(255, 222, 212, .05) !important;
-}
+  }
 </style>
