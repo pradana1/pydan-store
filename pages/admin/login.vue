@@ -39,7 +39,7 @@
               </div>
               <div class="row">
                 <div class="col-12">
-                  <button class="btn shadow-sm rounded-sm px-4 w-100" type="submit"><b>LOGIN</b></button>
+                  <button class="btn btn-warning shadow-sm rounded-sm px-4 w-100" type="submit"><b>LOGIN</b></button>
                 </div>
               </div>
             </form>
@@ -115,7 +115,10 @@
   background-color: #8FAFC4;
 }
 
-.btn {
-  background-color: #66A4AC;
+
+.btn-warning {
+  color: #fff;
+  background-color: #66A4AC !important;
+  border-color: #66A4AC !important;
 }
 </style>

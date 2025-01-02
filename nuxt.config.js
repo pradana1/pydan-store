@@ -56,17 +56,17 @@ export default {
 
   pwa: {
     meta: {
-      title: 'MI STORE - Distributor Xiaomi Indonesia Resmi',
-      author: 'Xiaomi Indonesia'
+      title: 'GALERY PYDAN - Selamat Datang',
+      author: 'PYDANNN'
     },
     manifest: {
-      name: 'Xiaomi',
-      short_name: 'xiaomi',
-      description: 'Official Toko Online Penjualan Produk Xiaomi',
+      name: 'PYDANNN',
+      short_name: 'PYDANNN',
+      description: 'Pydan Store Official Terpercaya di Indonesia',
       lang: 'en'
     },
     icon: {
-      fileName: 'images/logo.png',
+      fileName: 'images/pydan1.png',
       sizes: [64, 120, 144, 152, 192, 384, 512]
     }
   },
