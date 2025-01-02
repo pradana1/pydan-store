@@ -4,7 +4,7 @@
         <div class="fade-in">
           <div class="row">
             <div class="col-md-12">
-              <div class="card border-0 rounded shadow-sm border-top-orange">
+              <div class="card border-0 rounded shadow-sm border-top">
                 <div class="card-header">
                   <span class="font-weight-bold"><i class="fa fa-shopping-cart"></i> INVOICE</span>
                 </div>
@@ -14,7 +14,7 @@
                       <div class="input-group mb-3">
                           <input type="text" class="form-control" placeholder="cari berdasarkan no. invoice">
                           <div class="input-group-append">
-                              <button class="btn btn-warning"><i class="fa fa-search"></i>
+                              <button class="btn"><i class="fa fa-search"></i>
                               SEARCH
                               </button>
                           </div>
@@ -138,3 +138,12 @@ export default {
 }
 
 </script> 
+<style>
+.btn {
+  background-color: #66A4AC;
+}
+
+.page-item.active .page-link {
+  background-color: #66A4AC;
+}
+</style>

@@ -64,7 +64,7 @@
   
           <div class="row">
             <div class="col-md-12">
-              <div class="card border-0 rounded shadow-sm border-top-orange">
+              <div class="card border-0 rounded shadow-sm border-top">
                 <div class="card-header">
                   <span class="font-weight-bold"><i class="fa fa-chart-bar"></i> GRAFIK PENDAPATAN {{new Date().getFullYear()}}</span>
                 </div>
@@ -132,5 +132,9 @@
   </script>
   
   <style>
+  .card-header {
+    background-color: #8FAFC4;
+  }
+
   
   </style>

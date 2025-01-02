@@ -6,11 +6,11 @@
           <h3 class="mt-2 font-weight-bold">PYDAN STORE</h3>
         </nuxt-link>
       </div>
-      <div class="card-group">
-        <div class="card border-top-orange border-0 shadow-sm rounded">
+      <div class="card-group rounded">
+        <div class="card border-top border-0 shadow-sm rounded">
           <div class="card-body">
             <h1>Login</h1>
-            <p class="text-muted">Sign In to your account</p>
+            <p class="text-muted"><b>Sign In to your account</b></p>
             <div v-if="validation.message" class="mt-2">
               <b-alert show variant="danger">{{ validation.message }}</b-alert>
             </div>
@@ -39,7 +39,7 @@
               </div>
               <div class="row">
                 <div class="col-12">
-                  <button class="btn btn-warning shadow-sm rounded-sm px-4 w-100" type="submit">LOGIN</button>
+                  <button class="btn shadow-sm rounded-sm px-4 w-100" type="submit"><b>LOGIN</b></button>
                 </div>
               </div>
             </form>
@@ -106,4 +106,16 @@
 
 <style>
 
+
+.card-group {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.border-top {
+  background-color: #8FAFC4;
+}
+
+.btn {
+  background-color: #66A4AC;
+}
 </style>

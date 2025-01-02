@@ -1,5 +1,5 @@
 <template>
-    <footer class="pt-5" style="background: rgb(255, 255, 255); border-top: 5px solid rgb(230 74 26);">
+    <footer class="pt-5" style="background: rgb(255, 255, 255); border-top: 5px solid rgb(173 189 55);">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-5 mb-4">
@@ -60,7 +60,7 @@
         </div>
         <div class="row text-center mt-3 pb-3">
           <div class="col-md-12">
-            <hr> © <strong>PYDAN STORE</strong> 2024 • Hak Cipta Dilindungi </div>
+            <hr> © <strong>GALERY PYDAN</strong> 2024 • Hak Cipta Dilindungi </div>
         </div>
       </div>
     </footer>
@@ -73,5 +73,7 @@
   </script>
   
   <style>
-  
+  .border-top {
+    border-top: 5px solid #ADBD37;
+  }
   </style>

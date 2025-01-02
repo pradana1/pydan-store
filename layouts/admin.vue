@@ -50,5 +50,16 @@
     }
   </script>
   
-  <style>
-  </style>
+  <style scoped>
+  /* Ubah warna latar belakang sidebar */
+  .d-lg-down-none {
+    background-color: #336A86; /* Ganti dengan warna biru yang diinginkan */
+  }
+
+  /* Ubah warna teks biru pada link */
+  .c-sidebar-brand a {
+    color: #336A86; /* Ganti dengan warna biru yang diinginkan */
+  }
+
+  
+</style>

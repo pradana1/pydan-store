@@ -4,7 +4,7 @@
       <div class="fade-in">
         <div class="row">
           <div class="col-md-12">
-            <div class="card border-0 rounded shadow-sm border-top-orange">
+            <div class="card border-0 rounded shadow-sm border-top">
               <div class="card-header">
                 <span class="font-weight-bold"><i class="fa fa-layer-group"></i> PRODUCTS</span>
               </div>
@@ -13,12 +13,12 @@
                 <div class="form-group">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <nuxt-link :to="{name: 'admin-products-create'}" class="btn btn-warning btn-sm" style="padding-top: 10px;">
+                            <nuxt-link :to="{name: 'admin-products-create'}" class="btn btn-sm" style="padding-top: 10px;">
                             <i class="fa fa-plus-circle"></i> ADD NEW</nuxt-link>
                         </div>
                         <input type="text" class="form-control" v-model="search" @keypress.enter="searchData" placeholder="cari berdasarkan nama product">
                         <div class="input-group-append">
-                            <button @click="searchData" class="btn btn-warning"><i class="fa fa-search"></i>
+                            <button @click="searchData" class="btn"><i class="fa fa-search"></i>
                             SEARCH
                             </button>
                         </div>
@@ -166,5 +166,11 @@
 </script>
 
 <style>
+.btn {
+  background-color: #66A4AC;
+}
 
+.page-item.active .page-link {
+  background-color: #66A4AC;
+}
 </style>

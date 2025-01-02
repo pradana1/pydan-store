@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-md-7">
           <div class="card-group">
-            <div class="card border-top-orange border-0 shadow-sm rounded">
+            <div class="card border-top border-0 shadow-sm rounded">
               <div class="card-body">
                 <h3>REGISTER</h3>
                 <hr>
@@ -165,5 +165,23 @@
   </script>
   
   <style>
+  .card-group {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
   
+  .border-top {
+    background-color: #ADBD37;
+  }
+
+  .btn-warning {
+    color: #fff;
+    background-color: #67819D !important;
+    border-color: #67819D !important;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #67819D !important;
+  border-color: #67819D !important;
+}
   </style>
